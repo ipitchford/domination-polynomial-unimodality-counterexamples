@@ -1,0 +1,15 @@
+transfer m=2 s=1: total 614369 matches=True; mean 10.941249 matches=True
+transfer m=3 s=1: total 480239953 matches=True; mean 16.422409 matches=True
+transfer m=4 s=1: total 376038400961 matches=True; mean 21.897155 matches=True
+transfer m=2 s=2: total 3650992046811335681 matches=True; mean 34.542932 matches=True
+avd(G_{128,20}) in [160323.034985, 160323.034985]
+best lower bound at k=160560: 1565 e-6 H (floor)
+no global mode in [160217, 160412]; distance from avd > 88.965
+peaks K=4: n=4857004032, s=128, q=12, rho_max=4.832e-05, outer>=0.9293, middle<=0.1769, valid=True
+peaks K=8: n=50910461952, s=192, q=14, rho_max=5.152e-11, outer>=0.9177, middle<=0.2058, valid=True
+peaks K=16: n=387553689600, s=256, q=16, rho_max=9.995e-17, outer>=0.9119, middle<=0.2203, valid=True
+sharp b=4: even n=546 max|N[u]^N[w]|=2 ok=True; odd n=1097 degrees=[3, 4] max=2 ok=True
+sharp b=5: even n=1274 max|N[u]^N[w]|=2 ok=True; odd n=3191 degrees=[4, 5] max=2 ok=True
+sharp b=6: even n=2434 max|N[u]^N[w]|=2 ok=True; odd n=7309 degrees=[5, 6] max=2 ok=True
+sharp analytic: min even bound 2.6142 (>1), min odd bound 2.5094 (>2)
+ALL CHECKS PASSED

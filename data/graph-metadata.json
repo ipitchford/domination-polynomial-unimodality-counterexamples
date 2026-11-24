@@ -1,0 +1,14 @@
+{
+  "m": 128,
+  "s": 20,
+  "vertices": 317440,
+  "edges": 921600,
+  "bipartition_sizes": [
+    10240,
+    307200
+  ],
+  "minimum_degree": 3,
+  "maximum_degree": 120,
+  "uncompressed_sha256": "0654a33f151518b7d8ba1a7a198c9713c286318cae4d4135b6ea3ffafc97a77e",
+  "output": "bipartite-example.edgelist.gz"
+}

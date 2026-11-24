@@ -1,0 +1,98 @@
+{
+ "title": "Domination polynomials with many peaks: counterexamples to the Alikhani–Peng conjecture and the minimum-degree scale for a central mode",
+ "upload_type": "publication",
+ "publication_type": "preprint",
+ "description": "<p><strong>Unrefereed research candidate.</strong> Explicit 317,440-vertex graphs whose dominating-set counts dip and rise again, with an exact integer certificate.</p><p><strong>Context.</strong> A set of vertices of a graph is dominating when every vertex is in the set or next to it, as when guards or transmitters are placed so that every site is covered. Counting dominating sets by size gives a sequence d<sub>0</sub>, d<sub>1</sub>, ..., d<sub>n</sub>, the coefficients of the domination polynomial. In 2009 Alikhani and Peng conjectured that this sequence is always unimodal: it rises to a single maximum and then falls. The sequence is known to rise up to half the number of vertices, and the conjecture was proved for paths, cycles, complete multipartite graphs, powers of paths and cycles, threshold graphs, large graphs with a universal vertex and graphs of minimum degree at least 2 log<sub>2</sub> n. Recent papers found trees whose sequences are not log-concave, but unimodality itself was listed as open.</p><p><strong>Main results.</strong> (1) The conjecture is false: an explicit connected split graph and an explicit connected bipartite graph, each on 317,440 vertices, satisfy d<sub>160080</sub> &gt; d<sub>160320</sub> &lt; d<sub>160560</sub>, proved by an integer-arithmetic certificate (Theorem 1.1). (2) Connected split and bipartite graphs with order &radic;n/log n separated peak regions, with an explicit example with four peak regions on 4,857,004,032 vertices (Theorem 1.2). (3) An answer to a question of Beaton and Brown: for the explicit split graph the average size of a dominating set lies between 160323.034984 and 160323.034985, and no size within distance 88 of it is a most frequent size; for other graphs every most frequent size is at distance of order n from the average, with a very small constant (Theorem 1.3). (4) Counterexamples persist at minimum degree (1/2 + o(1)) log<sub>2</sub> n (Theorem 1.4(i)). (5) In the positive direction, the condition &sum;<sub>v</sub> (deg v + 2) 2<sup>&minus;deg v &minus; 1</sup> &le; 1 forces unimodality with the maximum at &lceil;n/2&rceil;, so minimum degree log<sub>2</sub> n + log<sub>2</sub> log<sub>2</sub> n + 1 suffices (n &ge; 4), and for a maximum exactly at the middle this is best possible up to an additive constant (Theorem 1.4(ii)-(iii)). (6) Single-site Glauber dynamics on dominating sets mixes in exponential time on the linear-gap graphs (Proposition 6.3).</p><p><strong>Method.</strong> Each construction contains two large families of dominating sets with exactly the same number of members whose typical sizes differ by much more than their spread, while every other dominating set belongs to a negligible collection. The size of a uniform dominating set is then close to an equal mixture of two separated humps, and the count dips between them. The principle is that of Bhattacharyya and Kahn (2013) for independent sets; the new work is making it exact under the covering condition of domination and certifying it in exact arithmetic.</p><p><strong>Limits.</strong> The explicit counterexample is large and has not been minimised. The linear mode-average gap is proved only for astronomically large graphs with a constant of order 10<sup>&minus;25</sup>; the explicit gap of more than 88 is for the 317,440-vertex graph. The least minimum degree that forces unimodality is still open, between (1/2 + o(1)) log<sub>2</sub> n and log<sub>2</sub> n + log<sub>2</sub> log<sub>2</sub> n + 1; the sharp result in Theorem 1.4(iii) concerns the position of the maximum, not unimodality. Unimodality for trees remains open.</p><p><strong>Contents.</strong> The paper (LaTeX source and PDF) and its figure; the bipartite example as a plain-text edge list (921,600 edges) with metadata; verify_witness.py (the integer certificate for the three coefficients); graph_family.py (generates the edge list in the compressed form that check_graph.py reads; its decompressed output equals the shipped text); check_graph.py (independent check of the edge list: size, degrees, bipartition, connectivity and hash); smallcheck.py (brute-force and transfer checks on small instances); check_criteria.py (the degree criterion on all labelled graphs of order at most six, and the circulant parameters); check_extensions.py (transfer identity, certified average size and exclusion of every index near it as a most frequent size, the explicit many-peak instances and the sharp-threshold constructions); make_figure.py; recorded outputs; the bibliography; a machine-readable index; a research-gate record; a review summary; a replay receipt and SHA-256 sums. All certificate arithmetic is exact (integers, fractions and outward-rounded dyadic numbers, Python standard library only), and every check exits with status 1 on failure, also under python -O.</p><p><strong>Assurance.</strong> Written proofs with exact-arithmetic certificates. Internal AI-assisted review only: five Claude reviewer roles run as two combined passes, two of which recomputed the certificate independently in exact arithmetic; a clean byte-for-byte replay by the lead; one revision round with extensions; then a verification re-review and proof audit of the new proofs. No second-model (Astra/Codex) review took place. Not peer review, independent reproduction or formal verification. Creator: Anonymous. Text CC0-1.0; code MIT.</p>",
+ "creators": [
+  {
+   "name": "Anonymous"
+  }
+ ],
+ "access_right": "open",
+ "license": "cc-zero",
+ "version": "0.1.0-candidate",
+ "publication_date": "2026-11-24",
+ "keywords": [
+  "domination polynomial",
+  "unimodality",
+  "Alikhani-Peng conjecture",
+  "dominating sets",
+  "graph polynomials",
+  "phase coexistence",
+  "minimum degree",
+  "Glauber dynamics"
+ ],
+ "notes": "Subtitle: Explicit 317,440-vertex graphs whose dominating-set counts dip and rise again, with an exact integer certificate. Code (*.py and the CI workflow) is MIT; prose, manuscript, figure, data, recorded outputs and records are CC0-1.0.",
+ "related_identifiers": [
+  {
+   "identifier": "https://github.com/ipitchford/domination-polynomial-unimodality-counterexamples/tree/v0.1.0-candidate",
+   "relation": "isSupplementTo",
+   "scheme": "url"
+  },
+  {
+   "identifier": "https://evidencepress.org/releases/domination-polynomial-unimodality-counterexamples/",
+   "relation": "isDocumentedBy",
+   "scheme": "url"
+  },
+  {
+   "identifier": "10.1007/s00373-022-02487-x",
+   "relation": "references",
+   "scheme": "doi"
+  },
+  {
+   "identifier": "10.37236/3034",
+   "relation": "references",
+   "scheme": "doi"
+  },
+  {
+   "identifier": "10.1016/j.disc.2023.113508",
+   "relation": "references",
+   "scheme": "doi"
+  },
+  {
+   "identifier": "10.1016/j.disc.2026.115520",
+   "relation": "references",
+   "scheme": "doi"
+  },
+  {
+   "identifier": "arXiv:0905.2251",
+   "relation": "references",
+   "scheme": "arxiv"
+  },
+  {
+   "identifier": "arXiv:2012.11813",
+   "relation": "references",
+   "scheme": "arxiv"
+  },
+  {
+   "identifier": "arXiv:2411.02288",
+   "relation": "references",
+   "scheme": "arxiv"
+  },
+  {
+   "identifier": "arXiv:2110.00709",
+   "relation": "references",
+   "scheme": "arxiv"
+  },
+  {
+   "identifier": "arXiv:2605.02193",
+   "relation": "references",
+   "scheme": "arxiv"
+  },
+  {
+   "identifier": "arXiv:2408.12731",
+   "relation": "references",
+   "scheme": "arxiv"
+  },
+  {
+   "identifier": "arXiv:2601.14494",
+   "relation": "references",
+   "scheme": "arxiv"
+  },
+  {
+   "identifier": "arXiv:2111.00641",
+   "relation": "references",
+   "scheme": "arxiv"
+  }
+ ]
+}

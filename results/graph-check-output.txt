@@ -1,0 +1,3 @@
+PASS: 317440 vertices, 921600 edges, connected and bipartite.
+Degree range 3 to 120.
+Uncompressed SHA-256 0654a33f151518b7d8ba1a7a198c9713c286318cae4d4135b6ea3ffafc97a77e

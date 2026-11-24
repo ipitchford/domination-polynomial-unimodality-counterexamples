@@ -1,0 +1,3 @@
+Pivotal bound passed for all 33867 labelled graphs of orders 1–6.
+The weighted degree condition holds for 63 graphs, each with a decreasing central tail.
+Circulant difference and connectivity checks passed for b = 4, …, 79.

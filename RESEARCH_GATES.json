@@ -1,0 +1,285 @@
+{
+ "schemaVersion": "1.0",
+ "provenance": "Compiled 24 November 2026 for 0.1.0-candidate from the dated searches of the internal AI-assisted review (24 November 2026), the source retrieval and reading record, the corpus overlap check, refs.bib, REVIEW_SUMMARY.md and the paper's own positioning (Section 1). It records scrutiny performed, not historical priority.",
+ "contributionMap": [
+  {
+   "claim": "The Alikhani-Peng conjecture is false: explicit connected split and bipartite graphs on 317,440 vertices with d_160080 > d_160320 < d_160560",
+   "unit": "statement",
+   "paperLocation": "Theorem 1.1; Sections 2-3",
+   "searches": [
+    {
+     "date": "2026-11-24",
+     "corpus": "arXiv API (abstracts) and a listing of math.CO domination titles from August to November 2026, by the domain reviewer",
+     "query": "domination OR dominating combined with unimodal, mode, log-concave or counterexample; \"Alikhani-Peng\"; recent average-order and domination-root papers (2610.11265, 2603.17114, 2607.25188, 2608.00109 checked and found unrelated)"
+    },
+    {
+     "date": "2026-11-24",
+     "corpus": "general web search and Crossref, by the domain reviewer; Evidence Press release corpus (site papers/ and the batch corpus list)",
+     "query": "\"domination polynomial\" with \"not unimodal\" or \"non-unimodal\" and counterexample; Beaton-Brown mode versus average question; citing works of Beaton-Brown 2022"
+    },
+    {
+     "date": "2026-11-24",
+     "corpus": "the nine cited works, all obtained and read (Alikhani-Peng 2009/2014, Beaton-Brown 2022, Burcroff-O'Brien 2023, Galvin-Zhang 2027, Omar 2026, Zhang 2021, Beaton-Schoonhoven 2024, Du-Heilman-Panova 2026, Bhattacharyya-Kahn 2013)",
+     "query": "known unimodal classes and minimum-degree thresholds (BB Theorem 3.2, Omar Proposition 13); rising half (BB Proposition 2.4); union bound (Omar Proposition 9); mode-average question (BB Section 4); two-family construction for independent sets and many local maxima (BK Sections 2-3); status of the conjecture in 2026"
+    }
+   ],
+   "closestPriorWork": "Beaton-Schoonhoven 2024 and Du-Heilman-Panova 2026 (failures of log-concavity in trees; unimodality listed as open); Omar 2026 (open); Bhattacharyya-Kahn 2013 (the analogous result for independent sets)",
+   "verdict": "new-in-bounded-search",
+   "verdictNote": "no earlier counterexample to unimodality of domination polynomials was found; the two-family principle is credited to Bhattacharyya-Kahn"
+  },
+  {
+   "claim": "Connected split and bipartite graphs with order sqrt(n)/log n peak regions; explicit four-peak instance on 4,857,004,032 vertices",
+   "unit": "statement",
+   "paperLocation": "Theorem 1.2; Section 5",
+   "searches": [
+    {
+     "date": "2026-11-24",
+     "corpus": "arXiv API (abstracts) and a listing of math.CO domination titles from August to November 2026, by the domain reviewer",
+     "query": "domination OR dominating combined with unimodal, mode, log-concave or counterexample; \"Alikhani-Peng\"; recent average-order and domination-root papers (2610.11265, 2603.17114, 2607.25188, 2608.00109 checked and found unrelated)"
+    },
+    {
+     "date": "2026-11-24",
+     "corpus": "the nine cited works, all obtained and read (Alikhani-Peng 2009/2014, Beaton-Brown 2022, Burcroff-O'Brien 2023, Galvin-Zhang 2027, Omar 2026, Zhang 2021, Beaton-Schoonhoven 2024, Du-Heilman-Panova 2026, Bhattacharyya-Kahn 2013)",
+     "query": "known unimodal classes and minimum-degree thresholds (BB Theorem 3.2, Omar Proposition 13); rising half (BB Proposition 2.4); union bound (Omar Proposition 9); mode-average question (BB Section 4); two-family construction for independent sets and many local maxima (BK Sections 2-3); status of the conjecture in 2026"
+    }
+   ],
+   "closestPriorWork": "Bhattacharyya-Kahn 2013 Section 3 remark (arbitrarily many local maxima for independent sets)",
+   "verdict": "partially-known-cited",
+   "verdictNote": "the analogue for independent sets is credited; the dominating-set version with a quantitative count is claimed as new"
+  },
+  {
+   "claim": "Modes far from the average: linear distance for infinitely many n, and an explicit 317,440-vertex graph with every global mode more than 88 from the average size (answers Beaton-Brown Section 4)",
+   "unit": "statement",
+   "paperLocation": "Theorem 1.3; Sections 3.4 and 6",
+   "searches": [
+    {
+     "date": "2026-11-24",
+     "corpus": "arXiv API (abstracts) and a listing of math.CO domination titles from August to November 2026, by the domain reviewer",
+     "query": "domination OR dominating combined with unimodal, mode, log-concave or counterexample; \"Alikhani-Peng\"; recent average-order and domination-root papers (2610.11265, 2603.17114, 2607.25188, 2608.00109 checked and found unrelated)"
+    },
+    {
+     "date": "2026-11-24",
+     "corpus": "general web search and Crossref, by the domain reviewer; Evidence Press release corpus (site papers/ and the batch corpus list)",
+     "query": "\"domination polynomial\" with \"not unimodal\" or \"non-unimodal\" and counterexample; Beaton-Brown mode versus average question; citing works of Beaton-Brown 2022"
+    },
+    {
+     "date": "2026-11-24",
+     "corpus": "the nine cited works, all obtained and read (Alikhani-Peng 2009/2014, Beaton-Brown 2022, Burcroff-O'Brien 2023, Galvin-Zhang 2027, Omar 2026, Zhang 2021, Beaton-Schoonhoven 2024, Du-Heilman-Panova 2026, Bhattacharyya-Kahn 2013)",
+     "query": "known unimodal classes and minimum-degree thresholds (BB Theorem 3.2, Omar Proposition 13); rising half (BB Proposition 2.4); union bound (Omar Proposition 9); mode-average question (BB Section 4); two-family construction for independent sets and many local maxima (BK Sections 2-3); status of the conjecture in 2026"
+    }
+   ],
+   "closestPriorWork": "Beaton-Brown 2022 Section 4 (the question); average-order papers on domination",
+   "verdict": "new-in-bounded-search",
+   "verdictNote": "no earlier answer to the mode-average question was found"
+  },
+  {
+   "claim": "Counterexamples at minimum degree (1/2 + o(1)) log2 n; the weighted criterion sum_v (deg v + 2) 2^(-deg v - 1) <= 1 forces unimodality with a central mode, so minimum degree log2 n + log2 log2 n + 1 suffices; this is sharp up to an additive constant for the central mode",
+   "unit": "statement",
+   "paperLocation": "Theorem 1.4; Sections 7-9; Corollary 8.2",
+   "searches": [
+    {
+     "date": "2026-11-24",
+     "corpus": "the nine cited works, all obtained and read (Alikhani-Peng 2009/2014, Beaton-Brown 2022, Burcroff-O'Brien 2023, Galvin-Zhang 2027, Omar 2026, Zhang 2021, Beaton-Schoonhoven 2024, Du-Heilman-Panova 2026, Bhattacharyya-Kahn 2013)",
+     "query": "known unimodal classes and minimum-degree thresholds (BB Theorem 3.2, Omar Proposition 13); rising half (BB Proposition 2.4); union bound (Omar Proposition 9); mode-average question (BB Section 4); two-family construction for independent sets and many local maxima (BK Sections 2-3); status of the conjecture in 2026"
+    },
+    {
+     "date": "2026-11-24",
+     "corpus": "arXiv API (abstracts) and a listing of math.CO domination titles from August to November 2026, by the domain reviewer",
+     "query": "domination OR dominating combined with unimodal, mode, log-concave or counterexample; \"Alikhani-Peng\"; recent average-order and domination-root papers (2610.11265, 2603.17114, 2607.25188, 2608.00109 checked and found unrelated)"
+    }
+   ],
+   "closestPriorWork": "Beaton-Brown 2022 Theorem 3.2 (minimum degree 2 log2 n); Omar 2026 Proposition 13 (log2(n(n+2)) - 2); Omar Proposition 9 (union bound)",
+   "verdict": "partially-known-cited",
+   "verdictNote": "earlier thresholds and tools are credited; the halved threshold, the repair bound and the matching central-mode lower bound are claimed as new"
+  },
+  {
+   "claim": "Method: phase coexistence of two exactly equal families of dominating sets with separated mean sizes, everything else negligible; exact transfer-matrix certificate with outward-rounded dyadic arithmetic",
+   "unit": "method",
+   "paperLocation": "Sections 1.4, 2 and 3",
+   "searches": [
+    {
+     "date": "2026-11-24",
+     "corpus": "the nine cited works, all obtained and read (Alikhani-Peng 2009/2014, Beaton-Brown 2022, Burcroff-O'Brien 2023, Galvin-Zhang 2027, Omar 2026, Zhang 2021, Beaton-Schoonhoven 2024, Du-Heilman-Panova 2026, Bhattacharyya-Kahn 2013)",
+     "query": "known unimodal classes and minimum-degree thresholds (BB Theorem 3.2, Omar Proposition 13); rising half (BB Proposition 2.4); union bound (Omar Proposition 9); mode-average question (BB Section 4); two-family construction for independent sets and many local maxima (BK Sections 2-3); status of the conjecture in 2026"
+    },
+    {
+     "date": "2026-11-24",
+     "corpus": "general web search and Crossref, by the domain reviewer; Evidence Press release corpus (site papers/ and the batch corpus list)",
+     "query": "\"domination polynomial\" with \"not unimodal\" or \"non-unimodal\" and counterexample; Beaton-Brown mode versus average question; citing works of Beaton-Brown 2022"
+    }
+   ],
+   "closestPriorWork": "Bhattacharyya-Kahn 2013 (two competing families for independent sets); transfer matrices as standard counting tools",
+   "verdict": "partially-known-cited",
+   "verdictNote": "the principle is credited; making it exact under the covering condition of domination and certifying it exactly is the new ingredient"
+  }
+ ],
+ "sourcesReadInFull": [
+  {
+   "citation": "Alikhani, S. and Peng, Y.-H. (2014), Introduction to domination polynomial of a graph, Ars Combinatoria 114, 257-266 (arXiv:0905.2251, 2009)",
+   "usedFor": "the conjecture (p. 7 of the preprint)",
+   "readWhat": "whole paper, arXiv version",
+   "date": "2026-11-24",
+   "evidenceLocator": "https://arxiv.org/abs/0905.2251"
+  },
+  {
+   "citation": "Beaton, I. and Brown, J. I. (2022), On the unimodality of domination polynomials, Graphs and Combinatorics 38(3), 90 (arXiv:2012.11813)",
+   "usedFor": "Proposition 2.4 (rising half), Theorem 3.2 (minimum degree 2 log2 n), Section 4 (3n/4 remark; mode-average question); classes proved unimodal",
+   "readWhat": "whole paper, arXiv version",
+   "date": "2026-11-24",
+   "evidenceLocator": "https://doi.org/10.1007/s00373-022-02487-x"
+  },
+  {
+   "citation": "Burcroff, A. and O'Brien, G. (2023), Unimodality and monotonic portions of certain domination polynomials, Discrete Mathematics 346(9), 113508 (arXiv:2110.00709)",
+   "usedFor": "nonincreasing portion; spiders with at most 400 legs",
+   "readWhat": "whole paper, arXiv version",
+   "date": "2026-11-24",
+   "evidenceLocator": "https://doi.org/10.1016/j.disc.2023.113508"
+  },
+  {
+   "citation": "Galvin, D. and Zhang, Y. (2027), The domination polynomial of powers of paths and cycles, Discrete Mathematics 350(3), 115520 (arXiv:2408.12731)",
+   "usedFor": "unimodality for powers of paths and cycles",
+   "readWhat": "whole paper, arXiv version",
+   "date": "2026-11-24",
+   "evidenceLocator": "https://doi.org/10.1016/j.disc.2026.115520"
+  },
+  {
+   "citation": "Omar, M. (2026), New perspectives on the unimodality of domination polynomials, arXiv:2601.14494",
+   "usedFor": "threshold graphs; Proposition 9 (union bound); Proposition 13 (minimum-degree variant); Section 6 question (3) on split graphs",
+   "readWhat": "whole paper",
+   "date": "2026-11-24",
+   "evidenceLocator": "https://arxiv.org/abs/2601.14494"
+  },
+  {
+   "citation": "Zhang, S. (2021), Domination polynomial is unimodal for large graphs with a universal vertex, arXiv:2111.00641",
+   "usedFor": "large graphs with a universal vertex; boundary of the construction",
+   "readWhat": "whole paper",
+   "date": "2026-11-24",
+   "evidenceLocator": "https://arxiv.org/abs/2111.00641"
+  },
+  {
+   "citation": "Beaton, I. and Schoonhoven, S. (2024), On the unimodality of nearly well-dominated trees, arXiv:2411.02288",
+   "usedFor": "non-log-concave trees; unimodality for trees open",
+   "readWhat": "whole paper",
+   "date": "2026-11-24",
+   "evidenceLocator": "https://arxiv.org/abs/2411.02288"
+  },
+  {
+   "citation": "Du, A., Heilman, S. and Panova, G. (2026), Trees and graphs with non log-concave dominating set sequence via AI tools, arXiv:2605.02193",
+   "usedFor": "trees with many failures of log-concavity; conjecture open in 2026",
+   "readWhat": "whole paper",
+   "date": "2026-11-24",
+   "evidenceLocator": "https://arxiv.org/abs/2605.02193"
+  },
+  {
+   "citation": "Bhattacharyya, A. and Kahn, J. (2013), A bipartite graph with non-unimodal independent set sequence, Electronic Journal of Combinatorics 20(4), P11",
+   "usedFor": "two-family principle for independent sets; remark on many local maxima (Section 3)",
+   "readWhat": "whole paper",
+   "date": "2026-11-24",
+   "evidenceLocator": "https://doi.org/10.37236/3034"
+  }
+ ],
+ "limitationTriage": [
+  {
+   "limitation": "The least minimum degree forcing unimodality is not determined",
+   "closingQuestion": "Is the constant gamma in (gamma + o(1)) log2 n equal to 1/2, 1 or in between?",
+   "triedOrSearched": "lower 1/2 from the construction, upper 1 from the weighted criterion; a gadget with fewer clauses per block was considered",
+   "estimatedCost": "research-level",
+   "cheap": false,
+   "decision": "OPEN",
+   "reasonOpen": "Section 10, open problem (1)",
+   "whyNotClosedNow": "needs a new construction or a new upper-bound argument"
+  },
+  {
+   "limitation": "The explicit counterexample is large",
+   "closingQuestion": "How small can a counterexample be?",
+   "triedOrSearched": "the 317,440-vertex example was chosen for a short certificate, not for small order",
+   "estimatedCost": "research-level search",
+   "cheap": false,
+   "decision": "OPEN",
+   "reasonOpen": "Section 10, open problem (2)",
+   "whyNotClosedNow": "a minimisation is a separate project"
+  },
+  {
+   "limitation": "Trees and forests",
+   "closingQuestion": "Is the domination polynomial of every tree unimodal?",
+   "triedOrSearched": "the phase-coexistence construction needs cycles and large degrees or a clique",
+   "estimatedCost": "research-level",
+   "cheap": false,
+   "decision": "OPEN",
+   "reasonOpen": "Section 10, open problem (3)",
+   "whyNotClosedNow": "stated as open"
+  },
+  {
+   "limitation": "The linear mode-average constant is of order 1e-25",
+   "closingQuestion": "Can Theorem 1.3(a) be made explicit with a reasonable constant?",
+   "triedOrSearched": "constant stated in Remark 6.1; an explicit expander was considered and estimated at days of work",
+   "estimatedCost": "days",
+   "cheap": false,
+   "decision": "OPEN",
+   "reasonOpen": "Section 10, open problem (4)",
+   "whyNotClosedNow": "the explicit finite answer (gap > 88) is given instead"
+  },
+  {
+   "limitation": "Effective thresholds for the asymptotic theorems",
+   "closingQuestion": "At what orders do Theorem 1.2 and Theorem 1.4(iii) start?",
+   "triedOrSearched": "explicit K = 4, 8, 16 instances of Theorem 1.2 checked exactly; explicit thresholds 2^20 (even) and 2^40 (odd) proved for Theorem 1.4(iii)",
+   "estimatedCost": "hours",
+   "cheap": true,
+   "decision": "CLOSED",
+   "reasonOpen": "",
+   "whyNotClosedNow": ""
+  },
+  {
+   "limitation": "Certified average size and mode exclusion relied on floating-point output",
+   "closingQuestion": "Is the explicit mode-average gap certified?",
+   "triedOrSearched": "dual-number transfer matrix with outward rounding and an exact scan of every index in [160217, 160412]; matched by an independent 120-digit recomputation in review",
+   "estimatedCost": "hours",
+   "cheap": true,
+   "decision": "CLOSED",
+   "reasonOpen": "",
+   "whyNotClosedNow": ""
+  },
+  {
+   "limitation": "Computational checks could pass vacuously under optimisation",
+   "closingQuestion": "Do the checks fail when a value is wrong?",
+   "triedOrSearched": "assert statements replaced by explicit checks that exit 1; three negative controls exit 1 under python -O",
+   "estimatedCost": "minutes",
+   "cheap": true,
+   "decision": "CLOSED",
+   "reasonOpen": "",
+   "whyNotClosedNow": ""
+  },
+  {
+   "limitation": "Novelty rests on searches of limited scope",
+   "closingQuestion": "Would indexed databases change attribution?",
+   "triedOrSearched": "arXiv API, web and Crossref searches, citing works of Beaton-Brown, Evidence Press corpus",
+   "estimatedCost": "subscription indexes",
+   "cheap": false,
+   "decision": "OPEN",
+   "reasonOpen": "MathSciNet and zbMATH were outside the searched corpus",
+   "whyNotClosedNow": "recorded here; the paper claims only that no earlier counterexample was found"
+  }
+ ],
+ "extensionScout": {
+  "by": "five internal reviewer roles (two combined Claude passes) and the lead",
+  "date": "2026-11-24",
+  "proposals": [
+   "explicit finite answer to the mode-average question",
+   "slow mixing of local samplers",
+   "odd orders in the central-mode threshold",
+   "explicit thresholds and instances for the asymptotic theorems",
+   "explicit expander for a reasonable constant in Theorem 1.3(a)",
+   "raising the 1/2 constant in the degree threshold",
+   "a smaller explicit counterexample"
+  ],
+  "actions": [
+   "done: Theorem 1.3(b)",
+   "done: Proposition 6.3",
+   "done: Theorem 1.4(iii) for odd n",
+   "done: K = 4, 8, 16 instances, thresholds 2^20 and 2^40, Corollary 8.2",
+   "not attempted; open problem (4)",
+   "not attempted; open problem (1)",
+   "not attempted; open problem (2)"
+  ]
+ }
+}

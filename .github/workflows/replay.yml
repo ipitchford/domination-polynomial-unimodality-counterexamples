@@ -1,0 +1,99 @@
+# SPDX-License-Identifier: MIT
+name: Replay
+on:
+  push:
+  pull_request:
+jobs:
+  quick:
+    name: Manifest; edge list regenerated and compared with the shipped text; four quick checks under python -O compared byte for byte; three negative controls (blocking)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check MANIFEST.sha256
+        run: sha256sum -c MANIFEST.sha256
+      - name: Run the quick checks in copies of the package (standard library only)
+        env:
+          PYTHONDONTWRITEBYTECODE: "1"
+        run: |
+          python3 -I -c 'import sys; print(sys.version)'
+          for d in run neg1 neg2 neg3; do mkdir -p "$RUNNER_TEMP/$d"; cp -R code data results "$RUNNER_TEMP/$d/"; done
+          cd "$RUNNER_TEMP/run"
+          python3 -O -I -B code/graph_family.py --m 128 --s 20 --output data/bipartite-example.edgelist.gz > /dev/null
+          gunzip -c data/bipartite-example.edgelist.gz | cmp - data/bipartite-example.edgelist
+          echo "generated edge list equals data/bipartite-example.edgelist"
+          for d in neg1 neg2 neg3; do cp data/bipartite-example.edgelist.gz "$RUNNER_TEMP/$d/data/"; done
+          python3 -O -I -B code/verify_witness.py > certificate-output.txt
+          python3 -O -I -B code/check_graph.py > graph-check-output.txt
+          python3 -O -I -B code/smallcheck.py > smallcheck-output.txt
+          python3 -O -I -B code/check_criteria.py > criteria-output.txt
+      - name: Compare byte for byte with the recorded outputs (declared policy; exact arithmetic)
+        run: |
+          for s in certificate-output graph-check-output smallcheck-output criteria-output; do
+            cmp "results/$s.txt" "$RUNNER_TEMP/run/$s.txt"
+            echo "byte-identical: results/$s.txt"
+          done
+      - name: Negative controls under -O
+        env:
+          PYTHONDONTWRITEBYTECODE: "1"
+        run: |
+          cd "$RUNNER_TEMP/neg1"
+          test "$(grep -c 'for k in (160080, 160320, 160560):' code/verify_witness.py)" = 1
+          sed -i 's/for k in (160080, 160320, 160560):/for k in (160080, 160081, 160560):/' code/verify_witness.py
+          if python3 -O -I -B code/verify_witness.py > /dev/null 2>&1; then echo "negative control 1 (middle index) not detected"; exit 1; fi
+          cd "$RUNNER_TEMP/neg2/data"
+          gunzip -c bipartite-example.edgelist.gz | sed '$d' | gzip -n -9 > e.tmp && mv e.tmp bipartite-example.edgelist.gz
+          cd "$RUNNER_TEMP/neg2"
+          if python3 -O -I -B code/check_graph.py > /dev/null 2>&1; then echo "negative control 2 (edge deleted) not detected"; exit 1; fi
+          cd "$RUNNER_TEMP/neg3"
+          test "$(grep -c 'sufficient_condition_count == 63' code/check_criteria.py)" = 1
+          sed -i "s/require(sufficient_condition_count == 63, 'sufficient_condition_count == 63')/require(sufficient_condition_count == 64, 'sufficient_condition_count == 64')/" code/check_criteria.py
+          if python3 -O -I -B code/check_criteria.py > /dev/null 2>&1; then echo "negative control 3 (criterion count) not detected"; exit 1; fi
+          echo "negative controls detected"
+      - name: Working tree unchanged
+        run: test -z "$(git status --porcelain)"
+  slow:
+    name: check_extensions.py under python -O (12 to 25 min; non-blocking)
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run check_extensions.py in a copy of the package
+        env:
+          PYTHONDONTWRITEBYTECODE: "1"
+        run: |
+          mkdir -p "$RUNNER_TEMP/ext" && cp -R code data results "$RUNNER_TEMP/ext/"
+          cd "$RUNNER_TEMP/ext"
+          python3 -O -I -B code/graph_family.py --m 128 --s 20 --output data/bipartite-example.edgelist.gz > /dev/null
+          python3 -O -I -B code/check_extensions.py --output new-extensions.json > new-extensions-output.txt
+      - name: Compare (text byte for byte; JSON without the interpreter field, floats to 1e-9 relative, all else exact)
+        run: |
+          cmp results/extensions-output.txt "$RUNNER_TEMP/ext/new-extensions-output.txt"
+          echo "byte-identical: results/extensions-output.txt"
+          python3 -I - results/extensions.json "$RUNNER_TEMP/ext/new-extensions.json" <<'PY'
+          import json, math, sys
+          a, b = (json.load(open(p)) for p in sys.argv[1:3])
+          bad = []
+          def cmp(x, y, p):
+              if isinstance(x, dict) and isinstance(y, dict):
+                  if set(x) != set(y): bad.append(p + ': keys differ'); return
+                  for k in x:
+                      if p == '' and k == 'python': continue
+                      cmp(x[k], y[k], p + '.' + k)
+              elif isinstance(x, list) and isinstance(y, list):
+                  if len(x) != len(y): bad.append(p + ': length differs'); return
+                  for i, (u, v) in enumerate(zip(x, y)): cmp(u, v, '%s[%d]' % (p, i))
+              elif isinstance(x, float) or isinstance(y, float):
+                  if not (isinstance(x, (int, float)) and isinstance(y, (int, float)) and math.isclose(x, y, rel_tol=1e-9, abs_tol=1e-300)): bad.append('%s: %r vs %r' % (p, x, y))
+              elif type(x) is not type(y) or x != y: bad.append('%s: %r vs %r' % (p, x, y))
+          cmp(a, b, '')
+          if bad: print('DIFFERS', bad[:20]); sys.exit(1)
+          print('extensions.json equal under the declared policy')
+          PY

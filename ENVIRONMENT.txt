@@ -1,0 +1,17 @@
+Release replay environment (24 November 2026, macOS arm64 host)
+Interpreter: CPython 3.12.11 (uv-managed: `uv run --no-project --python 3.12 ... python`; version printed inside the
+run with sys.version). Note: on this host `uv run --python 3.12 python3` can resolve to CPython 3.14 through a `python3`
+shim; the lead's pre-release replay recorded CPython 3.14.7 for that reason. Both produced matching outputs.
+Packages: none for the checks (Python standard library only: math, fractions, gzip, hashlib, json, itertools,
+argparse, pathlib). code/make_figure.py additionally needs matplotlib and is not part of the replay.
+GitHub CI: ubuntu-latest, actions/setup-python 3.12; every script runs under python -O.
+Cross-platform comparison (declared before tagging; same policy in CI, README.md and REPLAY_RECEIPT.md):
+- Certificate arithmetic is exact (Python integers, fractions.Fraction and outward-rounded dyadic integers). Floats
+  appear only as printed summaries of exact quantities.
+- results/*.txt (certificate-output, graph-check-output, smallcheck-output, criteria-output, extensions-output) are
+  compared byte for byte; none contains an interpreter version.
+- results/extensions.json: the field "python" (interpreter version) is excluded from the comparison; float-valued
+  fields (*_float, v_over_d2, rho_max, residual_over_W, outer_lower_over_W, middle_upper_over_W, even_grid_min,
+  odd_grid_min) are compared to a relative tolerance of 1e-9; every other value is compared exactly.
+- The edge list written by graph_family.py --m 128 --s 20 (gzip with mtime 0) decompresses to data/bipartite-example.edgelist
+  byte for byte; on macOS the compressed file was also byte-identical to the candidate's compressed file.

@@ -1,0 +1,37 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it using these metadata."
+type: software
+title: "Domination polynomials with many peaks: counterexamples to the Alikhani–Peng conjecture and the minimum-degree scale for a central mode"
+abstract: "Unrefereed research candidate. A set of vertices dominates a graph when every vertex is in the set or next to it; counting dominating sets by size gives the coefficients d_k of the domination polynomial. Alikhani and Peng conjectured in 2009 that this sequence is always unimodal. Two explicit connected graphs on 317,440 vertices, one split and one bipartite, satisfy d_160080 > d_160320 < d_160560, proved by an integer-arithmetic certificate. The same two-family construction gives graphs with order sqrt(n)/log n peak regions, graphs whose most frequent sizes are at distance of order n from the average size (and, explicitly, more than 88 from it for the 317,440-vertex split graph), and counterexamples at minimum degree (1/2 + o(1)) log2 n. Conversely, minimum degree log2 n + log2 log2 n + 1 forces unimodality with the maximum at ceil(n/2), which is best possible up to an additive constant for the position of the maximum."
+authors:
+  - name: "Anonymous"
+version: "0.1.0-candidate"
+date-released: "2026-11-24"
+doi: "10.5281/zenodo.24511988"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.24511988"
+    description: "This version"
+  - type: doi
+    value: "10.5281/zenodo.24511987"
+    description: "All versions (concept DOI)"
+repository-code: "https://github.com/ipitchford/domination-polynomial-unimodality-counterexamples"
+url: "https://evidencepress.org/releases/domination-polynomial-unimodality-counterexamples/"
+license: CC0-1.0
+keywords:
+  - domination polynomial
+  - unimodality
+  - Alikhani-Peng conjecture
+  - dominating sets
+  - graph polynomials
+  - minimum degree
+preferred-citation:
+  type: article
+  title: "Domination polynomials with many peaks: counterexamples to the Alikhani–Peng conjecture and the minimum-degree scale for a central mode"
+  authors:
+    - name: "Anonymous"
+  year: 2026
+  doi: "10.5281/zenodo.24511988"
+  publisher:
+    name: "Zenodo"
+  notes: "Version 0.1.0-candidate; unrefereed"
